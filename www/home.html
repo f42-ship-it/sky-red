@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Sky Red - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config Verbatim with updated Red/Crimson accents -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+                  "inverse-surface": "#e2e2e7",
+                  "surface-container-low": "#1a1c1f",
+                  "outline": "#909095",
+                  "error": "#ffb4ab",
+                  "tertiary-container": "#1a0000",
+                  "background": "#0f0c0c",
+                  "error-container": "#93000a",
+                  "outline-variant": "#45474b",
+                  "primary-fixed-dim": "#ccb8b8",
+                  "on-primary-fixed-variant": "#4b4545",
+                  "tertiary-fixed": "#fe7272",
+                  "on-tertiary-fixed": "#210000",
+                  "on-error": "#690005",
+                  "inverse-on-surface": "#342e2e",
+                  "surface-container-lowest": "#0e0c0c",
+                  "surface-bright": "#3d3737",
+                  "tertiary": "#e15353",
+                  "inverse-primary": "#635d5d",
+                  "surface": "#111317",
+                  "surface-container": "#1e2023",
+                  "secondary": "#ffadc6",
+                  "on-secondary-fixed": "#41001a",
+                  "secondary-fixed": "#ffd8e2",
+                  "on-error-container": "#ffdad6",
+                  "on-secondary-container": "#5c0028",
+                  "surface-dim": "#111317",
+                  "surface-variant": "#333539",
+                  "primary-container": "#100a0a",
+                  "tertiary-fixed-dim": "#e15353",
+                  "on-primary-container": "#7f7979",
+                  "on-primary": "#352f2f",
+                  "surface-tint": "#ccc6c6",
+                  "surface-container-highest": "#393333",
+                  "on-background": "#e7e2e2",
+                  "secondary-container": "#ff4b6b",
+                  "on-tertiary-container": "#8e0000",
+                  "secondary-fixed-dim": "#ffadc6",
+                  "on-tertiary-fixed-variant": "#530000",
+                  "on-secondary-fixed-variant": "#930044",
+                  "on-primary-fixed": "#201a1a",
+                  "primary": "#ccc6cc",
+                  "surface-container-high": "#2e2828",
+                  "on-secondary": "#69002e",
+                  "on-surface": "#e7e2e2",
+                  "on-surface-variant": "#cbc6c6",
+                  "primary-fixed": "#e8e2e2",
+                  "on-tertiary": "#390000"
+          },
+          "borderRadius": {
+                  "DEFAULT": "0.25rem",
+                  "lg": "0.5rem",
+                  "xl": "0.75rem",
+                  "full": "9999px"
+          },
+          "spacing": {
+                  "gutter-grid": "16px",
+                  "section-gap": "48px",
+                  "stack-lg": "32px",
+                  "stack-md": "16px",
+                  "stack-sm": "8px",
+                  "margin-page": "20px"
+          },
+          "fontFamily": {
+                  "headline-lg": ["Hanken Grotesk"],
+                  "label-sm": ["Inter"],
+                  "display-lg": ["Hanken Grotesk"],
+                  "body-lg": ["Inter"],
+                  "headline-md": ["Hanken Grotesk"],
+                  "body-md": ["Inter"]
+          },
+          "fontSize": {
+                  "headline-lg": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                  "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                  "display-lg": ["34px", {"lineHeight": "41px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                  "body-lg": ["17px", {"lineHeight": "24px", "fontWeight": "400"}],
+                  "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+                  "body-md": ["15px", {"lineHeight": "20px", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 0.5px solid rgba(255, 255, 255, 0.15);
+    }
+    .glass-surface {
+      background: rgba(17, 19, 23, 0.8);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .hero-gradient {
+      background: linear-gradient(180deg, rgba(255, 75, 107, 0.15) 0%, rgba(17, 19, 23, 0) 100%);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+
+<style>
+  /* iOS Safe Areas */
+  body { 
+    padding-top: env(safe-area-inset-top);
+    background: #111317;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
+  nav.fixed.bottom-0 {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 8px) !important;
+  }
+  /* Smooth page transitions */
+  body { animation: fadeIn 0.25s ease; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+</style>
+</head>
+<body class="bg-background text-on-background selection:bg-secondary-container/30 selection:text-white">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/10 flex items-center justify-between px-margin-page h-16 w-full max-w-md mx-auto left-1/2 -translate-x-1/2">
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-secondary-container dark:text-secondary-container">diamond</span>
+</button>
+<h1 class="font-headline-lg text-headline-lg font-bold tracking-tight text-on-surface dark:text-on-surface">Sky Red</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-primary dark:text-primary">search</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-20 pb-32 max-w-md mx-auto min-h-screen relative overflow-hidden">
+<!-- Hero Glow Background -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[120%] h-[500px] hero-gradient pointer-events-none -z-10"></div>
+<!-- Featured Hero Section -->
+<section class="px-margin-page mb-stack-lg">
+<div class="glass-card rounded-xl overflow-hidden group active:scale-[0.98] transition-transform duration-300">
+<div class="relative h-64 w-full">
+<img class="w-full h-full object-cover" data-alt="A cinematic, high-end editorial shot of a sleek YouTube interface displayed on a premium glass smartphone. The lighting is moody with deep blues and subtle red neon accents, reflecting the YouTube Plus brand identity. The background is a minimalist, dark studio setting with soft volumetric lighting and a tech-forward atmosphere of professional software curation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnTIQHGMYn0Q8wdG-fhYCFeOYKD0hB98Q3LQYohHx3sILEj967nnzbfq4KUVoYT6giB4sLDsLQeHFeFK8Qmk8V0DkCVh9JZEYkZDCb4HRXS3G1kK6jLekJDQztos_NUL0iySHb6lnfR6wiWQoSomi2Nb3LZAMEPu3uGZfi8sSv5KFU5B3O1tpi0hA8X6VypkAt0ScK6_MucMKI0JcfdV8RMulqpb_Ni3STYu5gGL7MP1-C7NYmIUZPRubZxzfXCzcGk_qF7RUHIw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-stack-md">
+<span class="bg-secondary-container/90 text-white text-[10px] font-bold px-2 py-0.5 rounded-full mb-2 inline-block tracking-widest">FEATURED RED</span>
+<h2 class="font-headline-lg text-headline-lg text-white">YouTube Red+</h2>
+<p class="font-body-md text-body-md text-white/70">Ad-free. Background play. Elite features.</p>
+</div>
+</div>
+<div class="p-stack-md flex justify-between items-center bg-white/5">
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 rounded-lg bg-error flex items-center justify-center">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+<div>
+<p class="font-headline-md text-body-md leading-tight">Google Inc.</p>
+<p class="font-label-sm text-label-sm text-outline">Modified Pro</p>
+</div>
+</div>
+<button class="bg-secondary-container hover:bg-secondary-container/80 text-white font-label-sm px-6 py-2 rounded-full transition-all active:scale-90 shadow-[0_0_15px_rgba(255,75,107,0.3)]">GET</button>
+</div>
+</div>
+</section>
+<!-- Top AI Apps Carousel -->
+<section class="mb-stack-lg">
+<div class="flex justify-between items-center px-margin-page mb-stack-sm">
+<h3 class="font-headline-md text-headline-md">Top AI Apps</h3>
+<button class="text-secondary-container font-label-sm hover:opacity-70">See All</button>
+</div>
+<div class="flex gap-4 overflow-x-auto px-margin-page pb-2 snap-x">
+<!-- AI Card 1 -->
+<div class="min-w-[140px] snap-start group">
+<div class="glass-card p-stack-sm rounded-xl mb-2 aspect-square flex items-center justify-center relative overflow-hidden active:scale-95 transition-transform">
+<img class="w-16 h-16 rounded-2xl object-cover shadow-lg" data-alt="A sophisticated digital artwork representing artificial intelligence, featuring a crystalline brain structure with glowing emerald green neural pathways. The aesthetic is clean, professional, and tech-forward, set against a deep midnight background with soft ambient glows. The lighting emphasizes transparency and glass textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ5ztdfyLg-psv_wBNPmLxuSJYrCHYo_47fvj7VrT96Job0p7jJACDAx8V9Qd67VcllIDZOUflWtudtOj0jkJGIm3mWyqt7ZdmHTnud5JD2hAqgB1F9MhQNUgxEjKEyCiB5DH3e5lZ-ILI1avxa29yzZauUWjD97zSO6qq1K99P_cAJOxObtTcel5q20rvHPHqe1CDQieHzbdpiHDrXsjhidw9DgxxddUq3r2VefoieesC71jq5lqA1nCYmCdr-UVUvVbTxjWVSg"/>
+<span class="absolute top-2 right-2 bg-secondary-container/20 text-secondary-container text-[8px] font-bold px-1.5 py-0.5 rounded border border-secondary-container/30">SKY</span>
+</div>
+<p class="font-headline-md text-body-md truncate">ChatGPT Pro</p>
+<p class="font-label-sm text-label-sm text-outline">Productivity</p>
+</div>
+<!-- AI Card 2 -->
+<div class="min-w-[140px] snap-start group">
+<div class="glass-card p-stack-sm rounded-xl mb-2 aspect-square flex items-center justify-center relative overflow-hidden active:scale-95 transition-transform">
+<img class="w-16 h-16 rounded-2xl object-cover shadow-lg" data-alt="An abstract, iridescent digital sphere representing deep learning and fluid intelligence. The design uses vibrant violet and electric blue gradients, captured in a high-key studio light that creates sharp reflections on its glass-like surface. The mood is futuristic and premium, fitting for a curated software gallery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJlu5UAe17PlE0xURaISQDVBdAlPsDaqctTOz93oIK7WsXpvPh5ye4iSJEOVTLRvaAzOle2qPQnzNEF0qo6czGZrWabxha6N--6d46k5TW9QUaF4m4YWFzB7zJwbKQFkYo5guB2iucHE4FRVh1sC2__yPX1e_Ozl4D9In_enP7NoPomL_q6L8PipIMyhFZQ0P7W0QAuVPqwLF_moRFm79cDI6CPlz0bNy5mwMr4EQF3x5HibQ2BxWzlf71_xtTresuqM4-C33FwQ"/>
+<span class="absolute top-2 right-2 bg-secondary-container/20 text-secondary-container text-[8px] font-bold px-1.5 py-0.5 rounded border border-secondary-container/30">LOCKED</span>
+</div>
+<p class="font-headline-md text-body-md truncate">Claude AI</p>
+<p class="font-label-sm text-label-sm text-outline">Assistant</p>
+</div>
+<!-- AI Card 3 -->
+<div class="min-w-[140px] snap-start group">
+<div class="glass-card p-stack-sm rounded-xl mb-2 aspect-square flex items-center justify-center relative active:scale-95 transition-transform">
+<div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-secondary-container to-on-secondary-container flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-white text-4xl">psychology</span>
+</div>
+</div>
+<p class="font-headline-md text-body-md truncate">MindFlow</p>
+<p class="font-label-sm text-label-sm text-outline">Creation</p>
+</div>
+</div>
+</section>
+<!-- Social Media Pro Section -->
+<section class="px-margin-page mb-stack-lg">
+<div class="flex justify-between items-center mb-stack-sm">
+<h3 class="font-headline-md text-headline-md">Social Media Red</h3>
+<button class="text-secondary-container font-label-sm hover:opacity-70">See All</button>
+</div>
+<div class="flex flex-col gap-3">
+<!-- List Item 1 -->
+<div class="glass-card p-stack-md rounded-xl flex items-center justify-between group active:scale-[0.99] transition-transform">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-[#f03333] via-[#e63c3c] to-[#bc1818] p-0.5">
+<div class="w-full h-full bg-background rounded-[10px] flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface">camera</span>
+</div>
+</div>
+<div>
+<p class="font-headline-md text-body-lg">Instagram Red</p>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary-container">Sky Mod</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<p class="font-label-sm text-label-sm text-outline">Photo &amp; Video</p>
+</div>
+</div>
+</div>
+<button class="bg-white/10 hover:bg-white/20 text-white font-label-sm px-4 py-1.5 rounded-full transition-colors">GET</button>
+</div>
+<!-- List Item 2 -->
+<div class="glass-card p-stack-md rounded-xl flex items-center justify-between group active:scale-[0.99] transition-transform">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-[#e0245e] flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-2xl">chat</span>
+</div>
+<div>
+<p class="font-headline-md text-body-lg">Twitter Red+</p>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary-container">Unlimited</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<p class="font-label-sm text-label-sm text-outline">News</p>
+</div>
+</div>
+</div>
+<button class="bg-white/10 hover:bg-white/20 text-white font-label-sm px-4 py-1.5 rounded-full transition-colors">GET</button>
+</div>
+<!-- List Item 3 -->
+<div class="glass-card p-stack-md rounded-xl flex items-center justify-between group active:scale-[0.99] transition-transform">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-[#cc0000] flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-2xl">send</span>
+</div>
+<div>
+<p class="font-headline-md text-body-lg">Telegram Red</p>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary-container">Premium</span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<p class="font-label-sm text-label-sm text-outline">Social</p>
+</div>
+</div>
+</div>
+<button class="bg-white/10 hover:bg-white/20 text-white font-label-sm px-4 py-1.5 rounded-full transition-colors">GET</button>
+</div>
+</div>
+</section>
+<!-- Editors Pick - Bento Style -->
+<section class="px-margin-page mb-12">
+<h3 class="font-headline-md text-headline-md mb-stack-sm">Sky Choice</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="glass-card h-48 rounded-2xl relative overflow-hidden p-stack-md flex flex-col justify-end">
+<img class="absolute inset-0 w-full h-full object-cover -z-10 brightness-50" data-alt="A top-down aesthetic shot of vintage high-tech gear, including a retro game controller and a sleek mechanical keyboard. The image is filtered with a cool cyan and magenta wash, creating a synthwave tech vibe. The composition is clean and organized, suggesting a professional gaming or coding setup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABvIf3ucCWcNU4SZApFwoTAUKip4Bb5XDWWqGteU2qjjGxa5iWf7rAjEGBkI0NbHXFj_zFj1Jo3pBbIJot243PdbRFmEbJGP-XnfruDG_XHQoGumfYEgG0fYAijA7xTf2rT8nvHVrfS4NN823JLDRPSnCB_jvnwAMHITh9ZYyAdVRNr6nNgYgG0JC4xvSBmkKXWrYflaj4gc75z9LtKa-2UCdXo5kH0VveQhwKW1y5A-M5XIsjZVXWgDUmWXDGFEytAGK4bLikeA"/>
+<p class="font-label-sm text-[10px] text-white/60 mb-1">BEST FOR GAMING</p>
+<h4 class="font-headline-md text-body-lg text-white">RetroEmul Red</h4>
+</div>
+<div class="grid grid-rows-2 gap-3">
+<div class="glass-card rounded-2xl p-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white">vpn_key</span>
+</div>
+<p class="font-headline-md text-label-sm text-white">Nord VPN+</p>
+</div>
+<div class="glass-card rounded-2xl p-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-white">security</span>
+</div>
+<p class="font-headline-md text-label-sm text-white">AdGuard XL</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-2xl border-t border-white/10 rounded-t-xl max-w-md mx-auto left-1/2 -translate-x-1/2">
+<div class="flex justify-around items-center px-4 pt-2 pb-6">
+<!-- Home Active -->
+<a class="flex flex-col items-center justify-center text-secondary-container dark:text-secondary-container bg-white/5 rounded-xl px-3 py-1 hover:bg-white/10 transition-colors active:scale-90 transition-transform duration-200" href="home.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<!-- Categories -->
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant hover:bg-white/10 transition-colors active:scale-90 transition-transform duration-200" href="categories.html">
+<span class="material-symbols-outlined">category</span>
+<span class="font-label-sm text-label-sm">Categories</span>
+</a>
+<!-- Downloads -->
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant hover:bg-white/10 transition-colors active:scale-90 transition-transform duration-200" href="downloads.html">
+<span class="material-symbols-outlined">download</span>
+<span class="font-label-sm text-label-sm">Downloads</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-outline dark:text-outline-variant hover:bg-white/10 transition-colors active:scale-90 transition-transform duration-200" href="home.html">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</div>
+</nav>
+<script>
+    // Micro-interactions and effects
+    document.querySelectorAll('.active\\:scale-95').forEach(el => {
+      el.addEventListener('mousedown', () => el.style.transform = 'scale(0.95)');
+      el.addEventListener('mouseup', () => el.style.transform = 'scale(1)');
+      el.addEventListener('mouseleave', () => el.style.transform = 'scale(1)');
+    });
+
+    // Subtle scroll reveal for glass cards
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-4');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.glass-card').forEach(card => {
+      card.classList.add('transition-all', 'duration-500', 'opacity-0', 'translate-y-4');
+      observer.observe(card);
+    });
+  </script>
+</body></html>

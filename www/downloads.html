@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Sky Red - Downloads</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#e2e2e7",
+                    "surface-container-low": "#1a1c1f",
+                    "outline": "#909095",
+                    "error": "#ffb4ab",
+                    "tertiary-container": "#001002",
+                    "background": "#111317",
+                    "error-container": "#93000a",
+                    "outline-variant": "#45474b",
+                    "primary-fixed-dim": "#c6c6cc",
+                    "on-primary-fixed-variant": "#45474b",
+                    "tertiary-fixed": "#72fe88",
+                    "on-tertiary-fixed": "#002107",
+                    "on-error": "#690005",
+                    "inverse-on-surface": "#2e3034",
+                    "surface-container-lowest": "#0c0e12",
+                    "surface-bright": "#37393d",
+                    "tertiary": "#53e16f",
+                    "inverse-primary": "#5d5e63",
+                    "surface": "#111317",
+                    "surface-container": "#1e2023",
+                    "secondary": "#ff5c5c",
+                    "on-secondary-fixed": "#410000",
+                    "secondary-fixed": "#ffdad6",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-container": "#ffffff",
+                    "surface-dim": "#111317",
+                    "surface-variant": "#333539",
+                    "primary-container": "#0a0c10",
+                    "tertiary-fixed-dim": "#53e16f",
+                    "on-primary-container": "#797a7f",
+                    "on-primary": "#2f3035",
+                    "surface-tint": "#c6c6cc",
+                    "surface-container-highest": "#333539",
+                    "on-background": "#e2e2e7",
+                    "secondary-container": "#d40000",
+                    "on-tertiary-container": "#008e36",
+                    "secondary-fixed-dim": "#ffb4ab",
+                    "on-tertiary-fixed-variant": "#00531c",
+                    "on-secondary-fixed-variant": "#93000a",
+                    "on-primary-fixed": "#1a1c20",
+                    "primary": "#c6c6cc",
+                    "surface-container-high": "#282a2e",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#e2e2e7",
+                    "on-surface-variant": "#c6c6cb",
+                    "primary-fixed": "#e2e2e8",
+                    "on-tertiary": "#003911"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter-grid": "16px",
+                    "section-gap": "48px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "margin-page": "20px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Hanken Grotesk"],
+                    "label-sm": ["Inter"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["34px", {"lineHeight": "41px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["17px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["22px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-md": ["15px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .progress-bar-fill {
+            transition: width 1s ease-in-out;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+
+<style>
+  /* iOS Safe Areas */
+  body { 
+    padding-top: env(safe-area-inset-top);
+    background: #111317;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
+  }
+  nav.fixed.bottom-0 {
+    padding-bottom: calc(env(safe-area-inset-bottom) + 8px) !important;
+  }
+  /* Smooth page transitions */
+  body { animation: fadeIn 0.25s ease; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+</style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-white/10 flex items-center justify-between px-margin-page h-16 w-full max-w-md mx-auto left-1/2 -translate-x-1/2">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-primary" data-icon="grid_view">grid_view</span>
+</button>
+<h1 class="font-headline-lg text-headline-lg font-bold tracking-tight text-on-surface">Sky Red</h1>
+</div>
+<button class="active:scale-95 transition-transform duration-200">
+<span class="material-symbols-outlined text-primary" data-icon="search">search</span>
+</button>
+</header>
+<main class="pt-20 pb-24 px-margin-page max-w-md mx-auto space-y-stack-lg">
+<!-- Header Section -->
+<section class="flex items-end justify-between">
+<div class="space-y-1">
+<p class="text-secondary font-label-sm uppercase tracking-widest text-[10px]">Queue Status</p>
+<h2 class="font-headline-lg text-headline-lg">Downloads</h2>
+</div>
+<button class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-full font-label-sm active:scale-95 transition-transform">
+            Update All
+        </button>
+</section>
+<!-- Updates Available Section -->
+<section class="space-y-stack-md">
+<h3 class="font-headline-md text-headline-md text-on-surface-variant flex items-center gap-2">
+            Available Updates
+            <span class="text-body-md font-normal opacity-50">(3)</span>
+</h3>
+<div class="space-y-3">
+<!-- Update Card 1 -->
+<div class="glass-panel p-4 rounded-xl flex items-center gap-4 group">
+<div class="w-14 h-14 rounded-2xl overflow-hidden flex-shrink-0 bg-surface-container-high relative">
+<img class="w-full h-full object-cover" data-alt="A minimalist 3D app icon for a creative coding editor, featuring glowing geometric shapes on a deep charcoal background with subtle emerald green light accents. The icon style is clean and professional, matching a corporate modern aesthetic with high contrast and sharp edges. Soft atmospheric lighting illuminates the icon from above." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm-_YTm2fwIblsCssJyLCOVs663eIHqwb4V7kH0ViyeXNfvz89K2e5eBZyGUQJmYMHUbbT855TEeJyiIj5jch2QIUE-BYsBbvUrJlPldX6mAgWCjDRwGUaOrVQaZKvpdjuegAQ_Y9mM95l8On_C23k0tsijApIlckJsp9Xcc3bKOZJIj5byyCDvZtbETkXU6i9wce2HMbtB40OQRIIHEXA99rWUsVSeM2dD23lhgL3vF_iOy_IEs-gwYHFSi8zyJKA6iQPYmcoeA"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline-md text-[16px] truncate">CodeFlow Plus</h4>
+<p class="text-on-surface-variant font-label-sm text-[11px]">Version 2.4.0 • 142 MB</p>
+</div>
+<button class="text-secondary border border-secondary/30 px-4 py-1 rounded-full text-label-sm hover:bg-secondary/10 transition-colors">
+                            Update
+                        </button>
+</div>
+<p class="text-on-surface-variant text-body-md text-[13px] mt-1 line-clamp-1">Performance optimizations and new dark themes.</p>
+</div>
+</div>
+<!-- Update Card 2 -->
+<div class="glass-panel p-4 rounded-xl flex items-center gap-4 group">
+<div class="w-14 h-14 rounded-2xl overflow-hidden flex-shrink-0 bg-surface-container-high relative">
+<img class="w-full h-full object-cover" data-alt="A sophisticated abstract 3D icon for financial analytics software, presenting a series of glass-like vertical bars of varying heights that glow with a soft electric blue light. The background is a velvety midnight blue, creating a sense of depth and technical excellence. The overall lighting is low-key with high-precision highlights on the edges of the glassy elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ-K2j5-GyuqR9HaF36jfLmBV6WcLYc0IFNRxs9VhxSxMOgJKGi1oDlEXMflQrMT4Rr2PvEzEOPBnU0PHypmYHWmPkq9UwDDBjIEy-escTJBltSAfoa80oSoHdPF9u9p-GbPawHTAZixEuvjMa-CoyPmAPSU1sfzUew2k0qmz4bEJou2xhyGKO-hwn3kXDatMt0JNP1OFJKHrKhNfjta6ibvbTGLO4yGuGJOiULFB6FShl95oSxhF96YEl8U3Jl_9uT8jHdxw0kw"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline-md text-[16px] truncate">EquityPro</h4>
+<p class="text-on-surface-variant font-label-sm text-[11px]">Version 5.1.2 • 89 MB</p>
+</div>
+<button class="text-secondary border border-secondary/30 px-4 py-1 rounded-full text-label-sm hover:bg-secondary/10 transition-colors">
+                            Update
+                        </button>
+</div>
+<p class="text-on-surface-variant text-body-md text-[13px] mt-1 line-clamp-1">Real-time market depth data added for Plus users.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Active Downloads Section -->
+<section class="space-y-stack-md">
+<h3 class="font-headline-md text-headline-md text-on-surface-variant">Active Downloads</h3>
+<div class="space-y-4">
+<!-- Downloading Item 1 -->
+<div class="glass-panel p-4 rounded-xl space-y-4 border-l-4 border-tertiary">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl overflow-hidden flex-shrink-0 bg-surface-container-high relative">
+<img class="w-full h-full object-cover" data-alt="A futuristic 3D camera lens icon crafted with glassmorphism principles, featuring vibrant cyan and magenta gradients visible through transparent outer layers. The lens sits on a dark, reflective surface that subtly mirrors its glow. The image uses a tech-forward lens, capturing high-quality editorial visual style with deep blacks and sharp neon light transitions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxDk_3suXWz7YZZumRHmLHZmOYCZJLku-Olik-JvdAbdvXPGIG1cPM1u6S-Ijt9u8TIz7isGcMUu90WtqxuGhlkXYlihUNPSfix-_tiaAkFn2bXsmtbYGuARIhdeegtuJI8o6AxU0VgpkTcDVbrtOQygFk2fTWBfJWMZVIeV_XjzzRjs7pNoQNcET-hgPN0QhHS9pvn7-5Gnr9-bixIh6KCt1RWs6Lr2NV9nBmac3aYPnbmHCbnGHcJOiyxaR4_nu6KNtniKSvDg"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-headline-md text-[16px] truncate">Visionary Editor</h4>
+<div class="flex justify-between items-center mt-1">
+<p class="text-tertiary font-label-sm text-[11px]">Downloading...</p>
+<p class="text-on-surface-variant font-label-sm text-[11px]">65% of 1.2 GB</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+<div class="progress-bar-fill h-full bg-tertiary rounded-full shadow-[0_0_10px_rgba(83,225,111,0.5)]" style="width: 65%;"></div>
+</div>
+</div>
+<!-- Downloading Item 2 -->
+<div class="glass-panel p-4 rounded-xl space-y-4 opacity-70">
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl overflow-hidden flex-shrink-0 bg-surface-container-high relative">
+<img class="w-full h-full object-cover" data-alt="An elegant 3D cloud synchronization icon for premium software, featuring floating metallic discs interconnected by light beams within a translucent cloud shell. The color palette is composed of cool greys and subtle white glows on a deep charcoal background. The mood is serene and technologically advanced, echoing an elite curation and professional design feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIkuSQjQms7vKRQJWmbCpXiLOHq58R_YPgxPDPVahYd8o65Nr1REjFdkAlYwDSHTUuyY2Mh9UpXfeoDlg7XboLFEncoMXSU6kj6Xt5YPFegAxo9uHCbzeYQEpkqYs9LsvUYG6msLp7P0c2o-le-3-3U0P-2Pdp0zr1aahzhvQV08d68brqn-3EKjzdZGt-ZDadb1qSl4GxI6agxmYXa2Xq-VfGZ0DaXTdW6FhoGUB6tLH6aiQiupx7VrTKpxJKrBRDjUY9EUwevg"/>
+</div>
+<div class="flex-1 min-w-0">
+<h4 class="font-headline-md text-[16px] truncate">SyncSphere</h4>
+<div class="flex justify-between items-center mt-1">
+<p class="text-on-surface-variant font-label-sm text-[11px]">Waiting in queue</p>
+<p class="text-on-surface-variant font-label-sm text-[11px]">0% of 45 MB</p>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<div class="w-full h-1.5 bg-white/5 rounded-full overflow-hidden">
+<div class="progress-bar-fill h-full bg-white/20 rounded-full" style="width: 2%;"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Recently Updated -->
+<section class="space-y-stack-md">
+<h3 class="font-headline-md text-headline-md text-on-surface-variant">Recently Updated</h3>
+<div class="space-y-3">
+<div class="glass-panel p-4 rounded-xl flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl overflow-hidden flex-shrink-0 grayscale opacity-40">
+<img class="w-full h-full object-cover" data-alt="A complex 3D node graph network icon representing connectivity and data structures. The nodes are small glowing orbs connected by thin, sharp light filaments. The background is a deep midnight grey with no harsh shadows. The style is strictly corporate modern with an emphasis on precision and technical detail, maintaining a clean editorial gallery feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBda5u20TEsTlgygOwSs8EqBh9dGZXEQozOWKbAXiR9I7vacfLI86ftbGtUSoyS5fgPhF-kvfA_AHigSXPE-7orOE_nS9UlKAyqvRMti0EwtJO0aFhxIh6I2vzXXKXWtGE2lJFZHN5r4O0NpQDTa1BsIqqr458a5QrceJhjpOulnbUiWqYjKHwgz5VGSccx5-ve2mDwEybJGfQU5GOCXE6vB_pmLxx3maG_OSgZWQVw88OIjT3Llv476YPOMuuNINxi9OYKOOYlCw"/>
+</div>
+<div class="flex-1">
+<h4 class="font-headline-md text-[16px]">NetworkStack</h4>
+<p class="text-on-surface-variant font-label-sm text-[11px]">Updated Yesterday</p>
+</div>
+<button class="text-secondary font-label-sm px-4 py-1">Open</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-2xl border-t border-white/10 rounded-t-xl flex justify-around items-center px-4 pt-2 pb-6">
+<a class="flex flex-col items-center justify-center text-outline transition-transform duration-200 active:scale-90" href="home.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline transition-transform duration-200 active:scale-90" href="categories.html">
+<span class="material-symbols-outlined" data-icon="category">category</span>
+<span class="font-label-sm text-label-sm mt-1">Categories</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary-container dark:text-secondary-container bg-white/5 rounded-xl px-3 py-1 transition-transform duration-200 active:scale-90" href="downloads.html">
+<span class="material-symbols-outlined" data-icon="download" style="font-variation-settings: 'FILL' 1;">download</span>
+<span class="font-label-sm text-label-sm mt-1">Downloads</span>
+</a>
+<a class="flex flex-col items-center justify-center text-outline transition-transform duration-200 active:scale-90" href="home.html">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</a>
+</nav>
+<script>
+    // Simple interaction to simulate progress updates
+    document.addEventListener('DOMContentLoaded', () => {
+        const bars = document.querySelectorAll('.progress-bar-fill');
+        bars.forEach(bar => {
+            if (bar.style.width === '65%') {
+                setInterval(() => {
+                    let width = parseInt(bar.style.width);
+                    if (width < 99) {
+                        width += Math.random() * 0.5;
+                        bar.style.width = width + '%';
+                    }
+                }, 2000);
+            }
+        });
+
+        // Smooth scale interactions for buttons
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(btn => {
+            btn.addEventListener('touchstart', () => {
+                btn.style.transform = 'scale(0.96)';
+                btn.style.filter = 'brightness(1.2)';
+            });
+            btn.addEventListener('touchend', () => {
+                btn.style.transform = 'scale(1)';
+                btn.style.filter = 'brightness(1)';
+            });
+        });
+    });
+</script>
+</body></html>
